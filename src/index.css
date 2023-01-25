@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  --clr-bg-primary: hsl(207, 26%, 17%);
+  --clr-bg-secondary: hsl(209, 23%, 22%);
+  --clr-text-primary: hsl(0, 0%, 100%);
+  --clr-text-input: hsl(0, 0%, 100%);
+}
+
+.light {
+  --clr-bg-primary: hsl(0, 0%, 98%);
+  --clr-bg-secondary: hsl(0, 0%, 100%);
+  --clr-text-primary: hsl(200, 15%, 8%);
+  --clr-text-input: hsl(0, 0%, 52%);
+}
+
+@layer base {
+  body {
+    font-family: "Nunito Sans", sans-serif;
+    @apply bg-primary text-primary;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1500px] mx-auto px-4;
+  }
+}
